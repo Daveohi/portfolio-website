@@ -265,14 +265,6 @@ section .title::after {
     transform: translateY(-50%);
 }
 
-/* Image container */
-.home .image-container img {
-    max-width: 400px;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 /* about section styling */
 .about .title::after {
     content: "who i am";
@@ -610,22 +602,6 @@ footer span a:hover {
         height: 350px;
         width: 350px;
     }
-
-    .home .image-container {
-        order: 2;
-        /* Ensure image appears second */
-        justify-content: flex-end;
-        /* Center the image horizontally */
-        margin-bottom: 20px;
-        /* Add spacing between image and text */
-    }
-
-    .home .image-container img {
-        max-width: 200px;
-        /* Shrink image to passport size */
-        width: 100%;
-        /* Ensure image scales with container */
-    }
 }
 
 @media (max-width: 991px) {
@@ -724,16 +700,6 @@ footer span a:hover {
 }
 
 /* For screens smaller than 768px */
-@media (max-width: 768px) {
-    .home .image-container {
-        display: none;
-        /* Hide the image entirely */
-    }
-
-}
-
-
-
 @media (max-width: 690px) {
     .max-width {
         padding: 0 23px;
@@ -794,9 +760,9 @@ footer span a:hover {
 }
 
 /* For screens smaller than 480px */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .home .image-container {
         display: none;
-        /* Hide the image entirely */
+        
     }
-}
+} */
