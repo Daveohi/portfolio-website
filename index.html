@@ -118,25 +118,25 @@
                         </div>
                         <h3 class="project__name">Idey</h3>
                         <p class="project__pitch">A two-sided service marketplace. Clients post jobs and hire verified local providers. Providers subscribe, apply to jobs, and manage their bookings.</p>
-                        <p class="project__role"><strong>Role:</strong> Flutter developer (freelance contract), working with a UI/UX designer and a full-stack developer.</p>
+                        <p class="project__role"><strong>Role:</strong> Sole Flutter developer (freelance contract), working with a UI/UX designer and a full-stack developer.</p>
 
                         <dl class="case">
                             <div>
-                                <dt>What I built</dt>
-                                <dd>The whole Flutter app, wired to the backend REST APIs for auth, jobs, subscriptions and notifications. Real-time chat and notifications run over Socket.IO.</dd>
+                                <dt>Architecture</dt>
+                                <dd>GetX for state, routing and dependency injection, with each feature split into controllers, bindings, repositories and models. Client and provider sides live in separate feature folders on top of a shared core. Networking runs on Dio.</dd>
                             </div>
                             <div>
-                                <dt>Integrations</dt>
-                                <dd>Subscription payments through Paystack, Korapay and Interswitch. Didit biometric identity verification so providers are verified. Cloudinary media uploads and Firebase Crashlytics.</dd>
+                                <dt>What I built</dt>
+                                <dd>Real-time chat with voice notes and live notifications over Socket.IO. Subscription payments through Paystack, Korapay and Interswitch. Didit biometric identity verification for providers, Cloudinary media uploads, and the app in four languages: English, Igbo, Spanish and German.</dd>
                             </div>
                             <div>
                                 <dt>Getting it shipped</dt>
-                                <dd>I configured app signing and ran closed testing with 12 testers. I fixed the bugs they reported, including a broken OTP resend flow, then published to production on Google Play.</dd>
+                                <dd>A GitHub Actions pipeline runs tests and lint on every push, with Codemagic for builds. Crashlytics catches crashes, and Remote Config with in-app updates moves users onto new versions. I ran closed testing with 12 testers, fixed what they found (including a broken OTP resend flow), and published to Google Play.</dd>
                             </div>
                         </dl>
 
                         <ul class="tags">
-                            <li>Flutter</li><li>REST</li><li>Socket.IO</li><li>Paystack</li><li>Korapay</li><li>Interswitch</li><li>Didit KYC</li><li>Cloudinary</li><li>Crashlytics</li>
+                            <li>Flutter</li><li>GetX</li><li>Dio</li><li>Socket.IO</li><li>Paystack</li><li>Korapay</li><li>Interswitch</li><li>Didit KYC</li><li>Cloudinary</li><li>Firebase</li><li>i18n</li><li>GitHub Actions</li><li>Codemagic</li>
                         </ul>
 
                         <div class="project__links">
@@ -144,7 +144,6 @@
                                 <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M4.6 2.3 13.9 12l-9.3 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1Zm10.4 10.8 2.6 2.7-11.3 6.4 8.7-9.1Zm4.1-2.4c.9.5.9 2.1 0 2.6l-2.2 1.3L14.1 12l2.8-2.9 2.2 1.6ZM6.3 1.8l11.3 6.4-2.6 2.7-8.7-9.1Z" /></svg>
                                 <span><small>Get it on</small>Google Play</span>
                             </a>
-                            <a class="btn btn--ghost" data-link="ideyApk" href="#" target="_blank" rel="noopener">Download APK</a>
                         </div>
                     </div>
 
@@ -208,24 +207,23 @@
                         <dl class="case">
                             <div>
                                 <dt>Architecture</dt>
-                                <dd>Riverpod with clean architecture and GoRouter, connected to a Node.js, Express and PostgreSQL backend.</dd>
+                                <dd>Clean architecture with data, domain and presentation layers in every feature, and 37 use cases in the domain layer. Errors come back as typed Either results (dartz). Riverpod Notifiers handle state, get_it handles dependency injection, and GoRouter handles navigation. The backend is Node.js, Express and PostgreSQL.</dd>
                             </div>
                             <div>
                                 <dt>Customer side</dt>
-                                <dd>Paystack checkout and order tracking through four stages: Pending, Confirmed, On the Way, Delivered. Push notifications through Firebase.</dd>
+                                <dd>Google sign-in, Paystack checkout, and order tracking through Pending, Confirmed, On the Way and Delivered. Firestore powers in-app chat, and Firebase Cloud Messaging sends push notifications.</dd>
                             </div>
                             <div>
                                 <dt>Rider side</dt>
-                                <dd>Mapbox maps with live route drawing, distance and ETA, and turn-by-turn prompts. If GPS is off, the app asks the rider to turn it on before navigating.</dd>
+                                <dd>Mapbox navigation with route drawing, distance and ETA, plus spoken turn-by-turn guidance through text-to-speech. The rider's location streams over Socket.IO so customers can track deliveries live. If GPS is off, the app asks the rider to turn it on.</dd>
                             </div>
                         </dl>
 
                         <ul class="tags">
-                            <li>Flutter</li><li>Riverpod</li><li>Clean Architecture</li><li>GoRouter</li><li>Mapbox</li><li>Paystack</li><li>Firebase</li><li>Push notifications</li>
+                            <li>Flutter</li><li>Riverpod</li><li>Clean Architecture</li><li>dartz</li><li>get_it</li><li>GoRouter</li><li>Mapbox</li><li>Socket.IO</li><li>Paystack</li><li>Firestore</li><li>FCM</li><li>Text-to-speech</li>
                         </ul>
 
                         <div class="project__links">
-                            <a class="btn btn--primary" data-link="labaApk" href="#" target="_blank" rel="noopener">Download APK</a>
                             <a class="btn btn--store" data-link="labaPlay" data-pending-label="Play Store listing in review" href="#" target="_blank" rel="noopener">
                                 <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M4.6 2.3 13.9 12l-9.3 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1Zm10.4 10.8 2.6 2.7-11.3 6.4 8.7-9.1Zm4.1-2.4c.9.5.9 2.1 0 2.6l-2.2 1.3L14.1 12l2.8-2.9 2.2 1.6ZM6.3 1.8l11.3 6.4-2.6 2.7-8.7-9.1Z" /></svg>
                                 <span><small>Coming soon to</small>Google Play</span>
@@ -304,25 +302,27 @@
 
                         <dl class="case">
                             <div>
-                                <dt>What I built</dt>
-                                <dd>Features and UI built from scratch with Bloc. The app runs in separate staging, development and production environments.</dd>
+                                <dt>Architecture</dt>
+                                <dd>Built on the Very Good CLI structure: state in Cubits from the Bloc library, with flutter_hooks, get_it and freezed models. The app builds in three flavors (development, staging and production), each with its own Firebase project. Messaging runs over WebSockets. Work goes through pull requests on Azure DevOps.</dd>
                             </div>
                             <div>
-                                <dt>Closing design gaps</dt>
-                                <dd>Where the Figma board had gaps, I proposed and built the missing screens, and pitched ideas for future updates.</dd>
+                                <dt>What I built</dt>
+                                <dd>The message list and chat screens, plus profile, edit profile, settings, security, help and about screens. I integrated the APIs for the feed, calendar events, notifications, privacy settings, block and report, saved posts and My Posts, and added shimmer loading states.</dd>
                             </div>
                             <div>
                                 <dt>Quality</dt>
-                                <dd>I reviewed 150+ lines of Dart each week, which cut bugs by about 30%. I also tested and optimized the app on Android and iOS during pre-release testing.</dd>
+                                <dd>Where the Figma board had gaps, I proposed and built the missing screens. I reviewed 150+ lines of Dart each week, which cut bugs by about 30%, and tested the app on Android and iOS ahead of release.</dd>
                             </div>
                         </dl>
 
                         <ul class="tags">
-                            <li>Flutter</li><li>Bloc</li><li>Geolocation</li><li>Multi-environment builds</li><li>Android</li><li>iOS</li>
+                            <li>Flutter</li><li>Bloc / Cubit</li><li>flutter_hooks</li><li>get_it</li><li>freezed</li><li>WebSockets</li><li>Flavors</li><li>Firebase</li><li>Azure DevOps</li>
                         </ul>
 
                         <div class="project__links">
-                            <a class="btn btn--ghost" data-link="ridifyApk" data-pending-label="Build not public yet" href="#" target="_blank" rel="noopener">Download APK</a>
+                            <a class="btn btn--primary" data-link="ridifyApk" href="#" target="_blank" rel="noopener">Download APK
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14" /></svg>
+                            </a>
                         </div>
                     </div>
 
@@ -372,17 +372,76 @@
                     </div>
                 </article>
 
+                <!-- ---------- MOVIX ---------- -->
+                <article class="project project--flip reveal" id="movix" style="--accent:#FF3B3B">
+                    <div class="project__info">
+                        <div class="project__meta">
+                            <span class="project__num">04</span>
+                            <span class="status status--web"><span class="dot dot--web"></span>Web demo live</span>
+                        </div>
+                        <h3 class="project__name">Movix</h3>
+                        <p class="project__pitch">A movie discovery app. Users browse and search titles, open details with cast and similar films, keep a watchlist, and personalize their space.</p>
+                        <p class="project__role"><strong>Role:</strong> Solo build for the A.I Basic React Native course at Algorithm Institute, which featured it as a student showcase.</p>
+
+                        <dl class="case">
+                            <div>
+                                <dt>Why it matters</dt>
+                                <dd>It shows I can bring the same mobile product thinking (tab navigation, lists, detail views, saved state) to React Native, not only Flutter.</dd>
+                            </div>
+                            <div>
+                                <dt>What it does</dt>
+                                <dd>Home, Explore, My List and Profile tabs. Search with top searches, a detail page with rating, runtime, genre and cast, and a "More Like This" grid. The build runs on the web as well, shown here in Safari on an iPhone.</dd>
+                            </div>
+                            <div>
+                                <dt>Credential</dt>
+                                <dd>Certified A.I Basic React Native Mobile Developer, Algorithm Institute, June 2026. Certificate ID ALG-000045-B52E.</dd>
+                            </div>
+                        </dl>
+
+                        <ul class="tags">
+                            <li>React Native</li><li>Tab navigation</li><li>Watchlist</li><li>Search</li><li>Web build</li>
+                        </ul>
+
+                        <div class="project__links">
+                            <a class="btn btn--primary" data-link="movixVideo" href="#" target="_blank" rel="noopener">Watch the demo
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+                            </a>
+                            <a class="btn btn--ghost" data-link="movixWeb" data-pending-label="" href="#" target="_blank" rel="noopener">Open web build</a>
+                        </div>
+                    </div>
+
+                    <div class="gallery" data-gallery="movix">
+                        <div class="gallery__track" tabindex="0" aria-label="Movix screens, scroll horizontally">
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/movix/detail.webp" aria-label="Enlarge: Movie detail">
+                                    <span class="phone__screen" style="--screen-bg:#F0F0F0"><img src="images/apps/movix/detail.webp" alt="Movix movie detail for Velvet Goldmine with rating, play and My List buttons, and cast" loading="lazy" width="772" height="1672"></span>
+                                </button>
+                                <figcaption>Movie detail</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/movix/explore.webp" aria-label="Enlarge: Explore and search">
+                                    <span class="phone__screen" style="--screen-bg:#F0F0F0"><img src="images/apps/movix/explore.webp" alt="Movix explore tab with search bar and top searches" loading="lazy" width="772" height="1670"></span>
+                                </button>
+                                <figcaption>Explore &amp; search</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/movix/more-like-this.webp" aria-label="Enlarge: More like this">
+                                    <span class="phone__screen" style="--screen-bg:#F0F0F0"><img src="images/apps/movix/more-like-this.webp" alt="Cast row and a More Like This grid of rated movie posters" loading="lazy" width="772" height="1669"></span>
+                                </button>
+                                <figcaption>More like this</figcaption>
+                            </figure>
+                        </div>
+                        <div class="gallery__nav">
+                            <button class="icon-btn" data-dir="-1" aria-label="Previous screens"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg></button>
+                            <button class="icon-btn" data-dir="1" aria-label="Next screens"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg></button>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- ---------- MORE WORK ---------- -->
                 <div class="more reveal">
                     <h3 class="more__title">More mobile work</h3>
                     <div class="more__grid">
-                        <article class="mini">
-                            <p class="mini__kicker">React Native · Algorithm Institute</p>
-                            <h4>Movix</h4>
-                            <p>A movie discovery app. Users browse movies, keep a watchlist, and personalize their feed. Algorithm Institute featured it as a student showcase project.</p>
-                            <p class="mini__foot">Certified A.I Basic React Native Mobile Developer · ID ALG-000045-B52E</p>
-                            <a class="mini__link" data-link="movix" data-pending-label="" href="#" target="_blank" rel="noopener">See the feature →</a>
-                        </article>
                         <article class="mini">
                             <p class="mini__kicker">Flutter · KodeHauz</p>
                             <h4>Job Board, WordWiz, Saleslify</h4>
@@ -452,7 +511,7 @@
                         <div class="xp__body">
                             <h3>Flutter Mobile App Developer Intern <span>· Ridify · Remote, USA</span></h3>
                             <ul>
-                                <li>Build features and UI for a geolocation app using Bloc, across staging, development and production environments.</li>
+                                <li>Build features and UI for a geolocation app with Bloc (Cubits), across development, staging and production flavors.</li>
                                 <li>Reviewed 150+ lines of Dart each week, cutting bugs by about 30%.</li>
                             </ul>
                         </div>
@@ -491,54 +550,63 @@
 
                 <div class="skills">
                     <div class="skill-group reveal">
-                        <h3>Core</h3>
+                        <h3>Architecture</h3>
                         <ul>
-                            <li><b>Flutter &amp; Dart</b><span>Every app on this page</span></li>
-                            <li><b>Clean Architecture</b><span>Lábà FOODS, KodeHauz apps</span></li>
-                            <li><b>React Native</b><span>Movix</span></li>
+                            <li><b>Clean Architecture</b><span>Lábà FOODS (data / domain / use cases), KodeHauz apps</span></li>
+                            <li><b>Feature-first + repositories</b><span>Idey, Ridify</span></li>
+                            <li><b>Dependency injection</b><span>get_it in Lábà FOODS and Ridify, GetX bindings in Idey</span></li>
+                            <li><b>Typed errors</b><span>dartz Either in Lábà FOODS</span></li>
                         </ul>
                     </div>
                     <div class="skill-group reveal">
                         <h3>State &amp; navigation</h3>
                         <ul>
                             <li><b>Riverpod</b><span>Lábà FOODS, KodeHauz apps</span></li>
-                            <li><b>Bloc</b><span>Ridify</span></li>
-                            <li><b>GetX</b><span>KodeHauz apps, before the migration</span></li>
+                            <li><b>Bloc / Cubit</b><span>Ridify</span></li>
+                            <li><b>GetX</b><span>Idey (in production)</span></li>
                             <li><b>GoRouter</b><span>Lábà FOODS</span></li>
                         </ul>
                     </div>
                     <div class="skill-group reveal">
-                        <h3>APIs &amp; real-time</h3>
+                        <h3>Networking &amp; real-time</h3>
                         <ul>
-                            <li><b>REST</b><span>Idey, Lábà FOODS, KodeHauz apps</span></li>
+                            <li><b>REST with Dio</b><span>Idey, Lábà FOODS, Ridify</span></li>
+                            <li><b>Socket.IO</b><span>Idey chat, Lábà FOODS rider tracking</span></li>
+                            <li><b>WebSockets</b><span>Ridify messaging</span></li>
                             <li><b>GraphQL</b><span>Saleslify</span></li>
-                            <li><b>Socket.IO</b><span>Idey chat and notifications</span></li>
                         </ul>
                     </div>
                     <div class="skill-group reveal">
-                        <h3>Payments &amp; identity</h3>
+                        <h3>Payments, identity &amp; maps</h3>
                         <ul>
                             <li><b>Paystack</b><span>Idey, Lábà FOODS</span></li>
                             <li><b>Korapay · Interswitch</b><span>Idey</span></li>
-                            <li><b>Didit biometric KYC</b><span>Idey</span></li>
+                            <li><b>Didit biometric KYC · Google sign-in</b><span>Idey · Lábà FOODS</span></li>
+                            <li><b>Mapbox · TTS voice guidance</b><span>Lábà FOODS rider navigation</span></li>
                         </ul>
                     </div>
                     <div class="skill-group reveal">
-                        <h3>Platform services</h3>
+                        <h3>Firebase &amp; platform</h3>
                         <ul>
-                            <li><b>Firebase · Push</b><span>Idey, Lábà FOODS</span></li>
-                            <li><b>Crashlytics</b><span>Idey</span></li>
-                            <li><b>Mapbox</b><span>Lábà FOODS rider navigation</span></li>
-                            <li><b>Cloudinary</b><span>Idey media uploads</span></li>
+                            <li><b>Crashlytics</b><span>Idey, Lábà FOODS, Ridify</span></li>
+                            <li><b>Firestore · FCM</b><span>Lábà FOODS chat and push</span></li>
+                            <li><b>Remote Config · in-app updates</b><span>Idey</span></li>
+                            <li><b>Localization</b><span>Idey in 4 languages, Lábà FOODS, Ridify</span></li>
                         </ul>
                     </div>
                     <div class="skill-group reveal">
                         <h3>Shipping &amp; teamwork</h3>
                         <ul>
-                            <li><b>Play signing &amp; release</b><span>Idey</span></li>
-                            <li><b>Closed testing</b><span>Idey, 12 testers</span></li>
-                            <li><b>Code review</b><span>KodeHauz, Ridify</span></li>
-                            <li><b>Git · CI/CD · Azure · Agile</b><span>Team workflows</span></li>
+                            <li><b>Play signing, closed testing, release</b><span>Idey (12 testers)</span></li>
+                            <li><b>CI/CD</b><span>GitHub Actions + Codemagic (Idey), Azure DevOps (Ridify)</span></li>
+                            <li><b>Build flavors</b><span>Ridify: dev, staging, prod</span></li>
+                            <li><b>Code review · Agile</b><span>KodeHauz, Ridify</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group skill-group--wide reveal">
+                        <h3>Also</h3>
+                        <ul>
+                            <li><b>React Native</b><span>Movix</span></li>
                         </ul>
                     </div>
                 </div>
@@ -570,9 +638,14 @@
                 <div class="journey__intro reveal">
                     <p class="section__index">04 / Journey</p>
                     <h2 class="section__title">From petroleum engineering to the Play Store.</h2>
-                    <figure class="portrait">
-                        <img src="images/david-portrait.webp" alt="Portrait of David Ohimai" width="640" height="800" loading="lazy">
-                    </figure>
+                    <div class="profile-card">
+                        <img src="images/david-portrait.webp" alt="Portrait of David Ohimai" width="560" height="560" loading="lazy">
+                        <div>
+                            <p class="profile-card__name">David Ohimai</p>
+                            <p class="profile-card__role">Flutter Mobile Developer</p>
+                            <p class="profile-card__meta"><span class="dot dot--live"></span>Delta State, Nigeria · Open to remote</p>
+                        </div>
+                    </div>
                 </div>
                 <ol class="timeline">
                     <li class="reveal"><span class="timeline__year">2012–18</span>

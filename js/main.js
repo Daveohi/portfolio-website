@@ -3,14 +3,14 @@
    Leave a value empty ("") and its button shows as "coming soon".
    ========================================================= */
 const LINKS = {
-    // TODO: replace with the latest Flutter CV (this is the older one)
-    cv: "https://drive.google.com/file/d/1aHEQSP9izI6k-OPT-5aNwP50BXpIa0DO/view?usp=sharing",
-    ideyPlay: "",   // Google Play listing for Idey
-    ideyApk: "",    // Google Drive APK for Idey
-    labaPlay: "",   // Google Play listing for Lábà FOODS (in review)
-    labaApk: "",    // Google Drive APK for Lábà FOODS
-    ridifyApk: "",  // Google Drive APK for Ridify
-    movix: "",      // LinkedIn feature post / repo for Movix
+    cv: "https://drive.google.com/file/d/1yM3WpBLHyt_AT1xCwq5UA7u3bWj3qdc-/view?usp=sharing",
+    ideyPlay: "https://play.google.com/store/apps/details?id=com.idey.app",
+    // Still in Play review (listing returns 404). Once public, set to:
+    // https://play.google.com/store/apps/details?id=com.labafoods.app
+    labaPlay: "",
+    ridifyApk: "https://drive.google.com/drive/folders/1b2G52h2F3HYau-kJtyrP7pYyWTzL4HAj?usp=sharing",
+    movixVideo: "https://drive.google.com/drive/folders/1sn20VyBBRL31IrQJGZuba4KdV-1lk0mg?usp=drive_link",
+    movixWeb: "https://movixapp-sable.vercel.app",
 };
 
 document.documentElement.classList.add("js");
