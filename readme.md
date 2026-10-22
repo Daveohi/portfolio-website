@@ -1,115 +1,56 @@
-# 🚀 David Ohimai - Personal Portfolio Website
+# David Ohimai · Flutter Mobile Developer Portfolio
 
-> **Where Code Meets Creativity** - A stunning, fully responsive personal portfolio showcasing the journey of a passionate software developer, trainer, and freelancer.
+A single-page portfolio for my Flutter work. It shows real screenshots of apps I've built inside Android and iOS device frames, with a short case study for each.
 
-![Portfolio Preview](https://img.shields.io/badge/Status-Live-brightgreen) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) 
+## What's on the page
 
-## 🌟 **The Story Behind the Code**
+| Section | Contents |
+| --- | --- |
+| Hero | Who I am, what I build, and four headline facts from my CV |
+| Apps | Case studies for **Idey** (live on Google Play), **Lábà FOODS** (in Play Store review), **Ridify** (internal testing, APK available) and **Movix** (React Native, web demo), plus smaller cards for KodeHauz apps, Spelling Bee and HNG projects |
+| Experience | Roles from my CV, newest first |
+| Skills | Each skill paired with the project where I used it |
+| Journey | From petroleum engineering to mobile development |
+| AI | A link to my separate [AI engineering portfolio](https://david-ohimai.github.io/ai-engineering-portfolio/) |
+| Contact | Email, LinkedIn, GitHub, CV |
 
-This isn't just another portfolio website—it's a digital testament to the evolution of a developer who transforms ideas into reality. From crafting elegant code since 2022 to mentoring the next generation of developers in 2025, this portfolio captures the essence of a journey filled with passion, innovation, and relentless pursuit of excellence.
+## Built with
 
-### 🎯 **What Makes This Portfolio Special?**
+Plain HTML, CSS and JavaScript. No framework and no build step, so it deploys straight to GitHub Pages.
 
-- **🎨 Mesmerizing Typing Animation**: Watch as "Software Dev", "Trainer", and "Freelancer" come alive with a custom-built character-by-character typing effect
-- **🌈 Crimson Theme**: A bold, professional color scheme that commands attention
-- **📱 Fully Responsive**: Seamlessly adapts from desktop to mobile with pixel-perfect precision
-- **🎪 Smooth Animations**: Hover effects, transitions, and micro-interactions that delight users
-- **🎭 Dynamic Navigation**: Sticky navbar that transforms as you scroll
-- **⚡ Lightning Fast**: Optimized for performance without compromising on aesthetics
+- **Device frames** are pure CSS: an Android punch-hole and an iOS Dynamic Island. Screens exported without a system status bar get a simulated one.
+- **Galleries** scroll horizontally with scroll-snap. Tap a phone to open it full size; arrow keys and Esc work in the viewer.
+- **Lábà FOODS** has a Customer / Rider toggle because the app serves both roles.
+- **Motion** (scroll reveal, floating hero phones, pointer tilt) is turned off when the visitor has reduced motion enabled.
+- **Palette:** deep navy with orange accents, taken from Idey. Fonts are Montserrat and Nunito Sans.
 
-## 🛠️ **Technical Arsenal**
+## Project structure
 
-### **Frontend Technologies**
-- **HTML5**: Semantic, accessible markup structure
-- **CSS3**: Advanced styling with Flexbox, CSS Grid, and custom animations
-- **Google Fonts**: Professional typography with Poppins and Ubuntu font families
-
-### **Key Features**
-- ✨ **Advanced CSS Animations**: Custom keyframe animations for typing effects
-- 🎨 **CSS Flexbox**: Modern layout techniques for perfect responsiveness
-- 🎪 **Interactive UI Elements**: Hover effects, button transitions, and scroll animations
-- 📐 **Mobile-First Design**: Responsive breakpoints for all device sizes
-- 🎯 **Smooth Scrolling**: Native CSS smooth scrolling for enhanced UX
-- 🔄 **Dynamic Content**: Real-time typing animation that cycles through roles
-
-## 🎪 **Showcase Sections**
-
-### 🏠 **Hero Section**
-- Captivating introduction with animated typing effect
-- Professional profile image with elegant hover effects
-- Clear call-to-action linking to CV/resume
-
-### 👨‍💻 **About Me**
-- Personal journey from Petroleum Engineering to Software Development
-- Educational background and career progression
-- Downloadable CV integration
-
-### 🛠️ **Services**
-- **Web Development**: Responsive, intuitive websites and applications
-- **Training**: Empowering the next generation of developers
-- **Mobile App Development**: Cross-platform solutions with Flutter/Dart
-
-### 🎯 **Skills**
-- Interactive skill bars with percentage indicators
-- Technologies: HTML5, CSS3, JavaScript, Flutter, Dart
-- Visual representation of expertise levels
-
-### 📞 **Contact**
-- Multiple contact methods with elegant icons
-- Functional contact form for direct communication
-- Location and professional details
-
-## 🎨 **Design Philosophy**
-
-This portfolio embodies the principle that **great design is invisible**—every element serves a purpose while creating an immersive experience that tells a story. The design choices reflect:
-
-- **Minimalism with Impact**: Clean layouts that let content shine
-- **Professional Elegance**: Sophisticated color scheme and typography
-- **User-Centric Approach**: Intuitive navigation and accessibility
-- **Performance-First**: Optimized loading and smooth interactions
-
-## 🚀 **Getting Started**
-
-```bash
-# Clone the repository
-git clone https://github.com/Daveohi/portfolio-website.git
-
-# Navigate to project directory
-cd portfolio-website
-
-# Open in your favorite code editor
-code .
+```
+index.html
+css/styles.css
+js/main.js            # LINKS config at the top: Play Store, APK, CV URLs
+images/apps/idey/     # WebP screenshots, one screen per file
+images/apps/laba/
+images/apps/ridify/
+images/david-portrait.webp
 ```
 
-## 📱 **Responsive Breakpoints**
+## Updating links
 
-The portfolio is meticulously crafted to provide an optimal experience across all devices:
+All Play Store, APK and CV links live in the `LINKS` object at the top of `js/main.js`. A button with an empty link is shown greyed out as "coming soon", so the page never has a dead link.
 
-- **Desktop**: 1300px+ (Full experience with side-by-side layouts)
-- **Large Tablets**: 1104px - 1299px (Adjusted image sizes)
-- **Tablets**: 768px - 1103px (Stacked layouts, hidden elements)
-- **Mobile**: 320px - 767px (Single-column, touch-optimized)
+## Run locally
 
-## 🎭 **Animation Highlights**
+```bash
+git clone https://github.com/Daveohi/portfolio-website.git
+cd portfolio-website
+# open index.html in a browser, or serve it:
+python -m http.server 8000
+```
 
-### **Typing Animation Magic**
-The star of the show is the advanced typing animation that cycles through:
-- 🖥️ **Software Dev** (12 steps in, 12 steps out)
-- 🎓 **Trainer** (7 steps in, 7 steps out)  
-- 💼 **Freelancer** (10 steps in, 10 steps out)
+## Contact
 
-Each character appears and disappears with precise timing, creating a mesmerizing effect that keeps visitors engaged.
-
-
-## 🤝 **Connect & Collaborate**
-
-Ready to create something extraordinary? Let's connect:
-
-- 📧 **Email**: daveohimai@gmail.com
-- 📍 **Location**: Benin City, Nigeria
-- 💼 **LinkedIn**: [Connect with David](https://linkedin.com/in/davidohimai)
-- 🐙 **GitHub**: [@Daveohi](https://github.com/Daveohi)
-
-## 📄 **License**
-
----
+- Email: daveohimai@gmail.com
+- LinkedIn: https://www.linkedin.com/in/david-ohimai
+- GitHub: https://github.com/Daveohi (mobile) · https://github.com/david-ohimai (AI)

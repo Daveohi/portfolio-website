@@ -1,251 +1,731 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="typing.css">
-
+    <title>David Ohimai · Flutter Mobile Developer</title>
+    <meta name="description"
+        content="David Ohimai is a Flutter mobile developer who builds Android and iOS apps and takes them through release. Idey is live on Google Play; Lábà FOODS is in Play Store review.">
+    <meta name="theme-color" content="#062236">
+    <meta property="og:title" content="David Ohimai · Flutter Mobile Developer">
+    <meta property="og:description"
+        content="Flutter apps for Android and iOS, from build to Google Play release. Idey, Lábà FOODS, Ridify and more.">
+    <meta property="og:type" content="website">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23062236'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='800' font-size='28' fill='%23FB8500'%3EDO%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Montserrat:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
-    </div>
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#services" class="menu-btn">Services</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+    <a class="skip-link" href="#work">Skip to projects</a>
 
-    <!-- home section start -->
-    <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">David Ohimai</div>
-                <div class="text-3">And I'm a <span class=" typing"></span></div>
-                <a href="https://drive.google.com/file/d/1aHEQSP9izI6k-OPT-5aNwP50BXpIa0DO/view?usp=sharing">Hire me</a>
-            </div>
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="top">
+        <div class="container nav__inner">
+            <a class="nav__logo" href="#top" aria-label="David Ohimai, back to top">
+                <span class="nav__mark">DO</span>
+                <span class="nav__name">David Ohimai</span>
+            </a>
+            <nav class="nav__links" id="nav-links" aria-label="Primary">
+                <a href="#work">Apps</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#journey">Journey</a>
+                <a href="#contact">Contact</a>
+                <a class="btn btn--small btn--primary" data-link="cv" href="#" target="_blank" rel="noopener">Résumé</a>
+            </nav>
+            <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+                <span></span><span></span>
+            </button>
         </div>
-    </section>
+    </header>
 
-    <!-- about section start -->
-    <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">About me</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="images/dohi.jpg" alt="">
-                </div>
-                <div class="column right">
-                    <div class="text">I'm David and I'm a <span class="typing-2"></span></div>
-                    <p>From crafting code to shaping minds, my journey in tech has been nothing short of extraordinary.
-                        Since 2022, I've been
-                        weaving digital solutions that don't just work—they inspire. As a mobile app developer
-                        freelancer since 2024, I've
-                        transformed visionary ideas into stunning applications that users love. Now, as a trainer
-                        stepping into 2025, I'm
-                        passionate about unlocking the potential in the next generation of developers.</p>
-                    <br />
-                    <div class="text">Education</div>
-                    <p>I hold a degree in Petroleum Engineering from the University of Benin.
-                        <a href="https://drive.google.com/file/d/1aHEQSP9izI6k-OPT-5aNwP50BXpIa0DO/view?usp=sharing">Download
-                            CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- services section start -->
-    <section class="services" id="services">
-        <div class="max-width">
-            <h2 class="title">My services</h2>
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text">Web Development</div>
-                        <p>Crafting responsive, intuitive websites that captivate audiences and drive engagement. From
-                            sleek landing pages to
-                            complex web applications, I bring your digital vision to life with clean code and stunning
-                            design.
-                        </p>
-                        <br />
-                        <a href="https://timbu-cloud-shop-tau.vercel.app/" style="color: gold;">Ecommerce website</a>
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="hero__glow" aria-hidden="true"></div>
+            <div class="container hero__grid">
+                <div class="hero__copy">
+                    <p class="eyebrow"><span class="dot dot--live"></span>Flutter Mobile Developer · Open to remote roles</p>
+                    <h1 class="hero__title">I build Flutter apps that make it <em>all the way to the store.</em></h1>
+                    <p class="hero__lede">
+                        I'm David Ohimai. I lead mobile development at KodeHauz and build apps for clients on contract.
+                        <strong>Idey</strong> is live on Google Play, and <strong>Lábà FOODS</strong> is in Play Store review.
+                        I work in clean architecture, review code closely, and handle the release work myself:
+                        signing, testing, fixing what testers find, and publishing.
+                    </p>
+                    <div class="hero__ctas">
+                        <a class="btn btn--primary" href="#work">See the apps
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7" /></svg>
+                        </a>
+                        <a class="btn btn--ghost" data-link="cv" href="#" target="_blank" rel="noopener">Download CV</a>
                     </div>
+                    <ul class="hero__stats">
+                        <li><strong>Live</strong><span>Idey on Google Play</span></li>
+                        <li><strong>3</strong><span>apps migrated GetX → Riverpod</span></li>
+                        <li><strong>12</strong><span>developers whose code I review</span></li>
+                        <li><strong>Top 523</strong><span>of 24,123, HNG Internship 11</span></li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="text">Training</div>
-                        <p>Empowering aspiring developers with hands-on training that transforms beginners into
-                            confident professionals. My
-                            teaching approach combines real-world experience with cutting-edge methodologies to
-                            accelerate learning.
-                        </p>
-                        <a href="https://www.youtube.com/watch?v=XCTrJpdob4s&list=PLjSk9e9VgEmP6PEtlJ9q5Ltv6EqVgnjby&index=13"
-                            style="color: gold;">Class session</a>
 
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text">Mobile App Development</div>
-                        <p>Building robust, scalable software solutions tailored to your unique business needs. I
-                            deliver mobile applications that perform flawlessly while exceeding client expectations.
-                        </p>
-                        <br />
-                        <a href="https://drive.google.com/drive/folders/1SBOs6TWTMmjXUkiYT0g8Qkii0sKN2lVR?usp=drive_link"
-                            style="color: gold;">Mobile App</a>
-
+                <div class="hero__stage" aria-hidden="true">
+                    <div class="hero__phones" data-tilt>
+                        <div class="phone phone--android hero__phone hero__phone--left">
+                            <span class="phone__screen" data-bar="dark" style="--screen-bg:#F5F5F4"><img src="images/apps/idey/available-jobs.webp" alt="" width="474" height="880"></span>
+                        </div>
+                        <div class="phone phone--android hero__phone hero__phone--center">
+                            <span class="phone__screen" data-bar="dark" style="--screen-bg:#F6F7F9"><img src="images/apps/laba/orders.webp" alt="" width="888" height="1864"></span>
+                        </div>
+                        <div class="phone phone--android hero__phone hero__phone--right">
+                            <span class="phone__screen" style="--screen-bg:#1C2434"><img src="images/apps/laba/rider-navigation.webp" alt="" width="876" height="1957"></span>
+                        </div>
+                        <span class="chip chip--float chip--a">Riverpod</span>
+                        <span class="chip chip--float chip--b">Socket.IO</span>
+                        <span class="chip chip--float chip--c">Mapbox</span>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-    </section>
 
-    <!-- skills section start -->
-    <section class="skills" id="skills">
-        <div class="max-width">
-            <h2 class="title">My skills</h2>
-            <div class="skills-content">
-                <div class="column left">
-                    <div class="text">My creative skills & experiences.</div>
-                    <p>With a foundation built since 2022 and refined through freelance projects in 2024, my technical
-                        arsenal is both diverse
-                        and deep. From crafting pixel-perfect interfaces to architecting mobile app design systems, I
-                        bring a holistic approach to
-                        development. My journey into training in 2025 has further sharpened my problem-solving abilities
-                        and deepened my
-                        understanding of best practices.</p>
-                    <a href="https://drive.google.com/drive/folders/1oGxRbK1eFWHJlEfsbjCzgF__Re9x-yOp?usp=drive_link">Mobile
-                        App Projects</a>
-                </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info">
-                            <span>HTML</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="line html"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>CSS</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="line css"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>JavaScript</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="line css"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Flutter</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="line css"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Dart</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="line css"></div>
-                    </div>
+            <div class="marquee" aria-label="Technologies I work with">
+                <div class="marquee__track">
+                    <span>Flutter</span><span>Dart</span><span>Riverpod</span><span>Bloc</span><span>GetX</span><span>GoRouter</span><span>Clean Architecture</span><span>REST</span><span>GraphQL</span><span>Socket.IO</span><span>Firebase</span><span>Crashlytics</span><span>Paystack</span><span>Korapay</span><span>Interswitch</span><span>Mapbox</span><span>Cloudinary</span><span>Google Play release</span>
+                    <span aria-hidden="true">Flutter</span><span aria-hidden="true">Dart</span><span aria-hidden="true">Riverpod</span><span aria-hidden="true">Bloc</span><span aria-hidden="true">GetX</span><span aria-hidden="true">GoRouter</span><span aria-hidden="true">Clean Architecture</span><span aria-hidden="true">REST</span><span aria-hidden="true">GraphQL</span><span aria-hidden="true">Socket.IO</span><span aria-hidden="true">Firebase</span><span aria-hidden="true">Crashlytics</span><span aria-hidden="true">Paystack</span><span aria-hidden="true">Korapay</span><span aria-hidden="true">Interswitch</span><span aria-hidden="true">Mapbox</span><span aria-hidden="true">Cloudinary</span><span aria-hidden="true">Google Play release</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- contact section start -->
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>Ready to transform your ideas into reality? Whether you need a cutting-edge application, expert
-                        training, or custom
-                        software solutions, I'm here to help you succeed. Let's connect and create something
-                        extraordinary together.</p>
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">David Ohimai</div>
+        <!-- ============ WORK ============ -->
+        <section class="section" id="work">
+            <div class="container">
+                <header class="section__head reveal">
+                    <p class="section__index">01 / Apps I've built</p>
+                    <h2 class="section__title">Real apps, real users, real store listings.</h2>
+                    <p class="section__lede">Every screen below comes from an app I built. Tap any phone to view it full size.</p>
+                </header>
+
+                <!-- ---------- IDEY ---------- -->
+                <article class="project reveal" id="idey" style="--accent:#FB8500">
+                    <div class="project__info">
+                        <div class="project__meta">
+                            <span class="project__num">01</span>
+                            <span class="status status--live"><span class="dot dot--live"></span>Live on Google Play</span>
+                        </div>
+                        <h3 class="project__name">Idey</h3>
+                        <p class="project__pitch">A two-sided service marketplace. Clients post jobs and hire verified local providers. Providers subscribe, apply to jobs, and manage their bookings.</p>
+                        <p class="project__role"><strong>Role:</strong> Sole Flutter developer (freelance contract), working with a UI/UX designer and a full-stack developer.</p>
+
+                        <dl class="case">
+                            <div>
+                                <dt>Architecture</dt>
+                                <dd>GetX for state, routing and dependency injection, with each feature split into controllers, bindings, repositories and models. Client and provider sides live in separate feature folders on top of a shared core. Networking runs on Dio.</dd>
                             </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title">Benin city, Nigeria</div>
+                            <div>
+                                <dt>What I built</dt>
+                                <dd>Real-time chat with voice notes and live notifications over Socket.IO. Subscription payments through Paystack, Korapay and Interswitch. Didit biometric identity verification for providers, Cloudinary media uploads, and the app in four languages: English, Igbo, Spanish and German.</dd>
                             </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">daveohimai@gmail.com</div>
+                            <div>
+                                <dt>Getting it shipped</dt>
+                                <dd>A GitHub Actions pipeline runs tests and lint on every push, with Codemagic for builds. Crashlytics catches crashes, and Remote Config with in-app updates moves users onto new versions. I ran closed testing with 12 testers, fixed what they found (including a broken OTP resend flow), and published to Google Play.</dd>
                             </div>
+                        </dl>
+
+                        <ul class="tags">
+                            <li>Flutter</li><li>GetX</li><li>Dio</li><li>Socket.IO</li><li>Paystack</li><li>Korapay</li><li>Interswitch</li><li>Didit KYC</li><li>Cloudinary</li><li>Firebase</li><li>i18n</li><li>GitHub Actions</li><li>Codemagic</li>
+                        </ul>
+
+                        <div class="project__links">
+                            <a class="btn btn--store" data-link="ideyPlay" href="#" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M4.6 2.3 13.9 12l-9.3 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1Zm10.4 10.8 2.6 2.7-11.3 6.4 8.7-9.1Zm4.1-2.4c.9.5.9 2.1 0 2.6l-2.2 1.3L14.1 12l2.8-2.9 2.2 1.6ZM6.3 1.8l11.3 6.4-2.6 2.7-8.7-9.1Z" /></svg>
+                                <span><small>Get it on</small>Google Play</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="gallery" data-gallery="idey">
+                        <div class="gallery__track" tabindex="0" aria-label="Idey screens, scroll horizontally">
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/idey/categories.webp" aria-label="Enlarge: Service categories">
+                                    <span class="phone__screen" data-bar="dark" style="--screen-bg:#F4F4F2"><img src="images/apps/idey/categories.webp" alt="Idey service categories grid: construction, electricals, interiors, mechanical and more" loading="lazy" width="460" height="694"></span>
+                                </button>
+                                <figcaption>Service categories</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/idey/available-jobs.webp" aria-label="Enlarge: Available jobs">
+                                    <span class="phone__screen" data-bar="dark" style="--screen-bg:#F5F5F4"><img src="images/apps/idey/available-jobs.webp" alt="Available jobs list with priority labels, locations and dates" loading="lazy" width="474" height="880"></span>
+                                </button>
+                                <figcaption>Provider: available jobs</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/idey/job-detail.webp" aria-label="Enlarge: Job detail">
+                                    <span class="phone__screen" data-bar="dark" style="--screen-bg:#F5F5F4"><img src="images/apps/idey/job-detail.webp" alt="Job detail with description, photo evidence, and accept or decline buttons" loading="lazy" width="420" height="860"></span>
+                                </button>
+                                <figcaption>Accept or decline a job</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/idey/my-jobs.webp" aria-label="Enlarge: Client's posted jobs">
+                                    <span class="phone__screen" data-bar="dark" style="--screen-bg:#F5F5F4"><img src="images/apps/idey/my-jobs.webp" alt="Client's posted jobs with status: in progress, pending, complete" loading="lazy" width="437" height="876"></span>
+                                </button>
+                                <figcaption>Client: posted jobs</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/idey/job-complete.webp" aria-label="Enlarge: Booking details">
+                                    <span class="phone__screen" data-bar="dark" style="--screen-bg:#F5F5F4"><img src="images/apps/idey/job-complete.webp" alt="Booking details with edit and delete menu" loading="lazy" width="438" height="876"></span>
+                                </button>
+                                <figcaption>Booking details</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/idey/subscription.webp" aria-label="Enlarge: Subscription plans">
+                                    <span class="phone__screen" data-bar="dark" style="--screen-bg:#FFFFFF"><img src="images/apps/idey/subscription.webp" alt="Switch subscription plan sheet: monthly ₦500 or yearly ₦5400" loading="lazy" width="437" height="884"></span>
+                                </button>
+                                <figcaption>Provider subscriptions</figcaption>
+                            </figure>
+                        </div>
+                        <div class="gallery__nav">
+                            <button class="icon-btn" data-dir="-1" aria-label="Previous screens"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg></button>
+                            <button class="icon-btn" data-dir="1" aria-label="Next screens"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ---------- LÁBÀ FOODS ---------- -->
+                <article class="project project--flip reveal" id="laba" style="--accent:#2FB36B">
+                    <div class="project__info">
+                        <div class="project__meta">
+                            <span class="project__num">02</span>
+                            <span class="status status--review"><span class="dot dot--review"></span>In Google Play review</span>
+                        </div>
+                        <h3 class="project__name">Lábà FOODS</h3>
+                        <p class="project__pitch">A food delivery marketplace for Nigerian staples, with one app for both roles. Customers order and track deliveries. Riders get turn-by-turn navigation to the customer.</p>
+                        <p class="project__role"><strong>Role:</strong> Flutter developer (freelance contract), taking the app to its production phase.</p>
+
+                        <dl class="case">
+                            <div>
+                                <dt>Architecture</dt>
+                                <dd>Clean architecture with data, domain and presentation layers in every feature, and 37 use cases in the domain layer. Errors come back as typed Either results (dartz). Riverpod Notifiers handle state, get_it handles dependency injection, and GoRouter handles navigation. The backend is Node.js, Express and PostgreSQL.</dd>
+                            </div>
+                            <div>
+                                <dt>Customer side</dt>
+                                <dd>Google sign-in, Paystack checkout, and order tracking through Pending, Confirmed, On the Way and Delivered. Firestore powers in-app chat, and Firebase Cloud Messaging sends push notifications.</dd>
+                            </div>
+                            <div>
+                                <dt>Rider side</dt>
+                                <dd>Mapbox navigation with route drawing, distance and ETA, plus spoken turn-by-turn guidance through text-to-speech. The rider's location streams over Socket.IO so customers can track deliveries live. If GPS is off, the app asks the rider to turn it on.</dd>
+                            </div>
+                        </dl>
+
+                        <ul class="tags">
+                            <li>Flutter</li><li>Riverpod</li><li>Clean Architecture</li><li>dartz</li><li>get_it</li><li>GoRouter</li><li>Mapbox</li><li>Socket.IO</li><li>Paystack</li><li>Firestore</li><li>FCM</li><li>Text-to-speech</li>
+                        </ul>
+
+                        <div class="project__links">
+                            <a class="btn btn--store" data-link="labaPlay" data-pending-label="Play Store listing in review" href="#" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M4.6 2.3 13.9 12l-9.3 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1Zm10.4 10.8 2.6 2.7-11.3 6.4 8.7-9.1Zm4.1-2.4c.9.5.9 2.1 0 2.6l-2.2 1.3L14.1 12l2.8-2.9 2.2 1.6ZM6.3 1.8l11.3 6.4-2.6 2.7-8.7-9.1Z" /></svg>
+                                <span><small>Coming soon to</small>Google Play</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="gallery" data-gallery="laba">
+                        <div class="tabs" role="tablist" aria-label="Lábà FOODS roles">
+                            <button role="tab" aria-selected="true" aria-controls="laba-customer" id="tab-laba-customer">Customer app</button>
+                            <button role="tab" aria-selected="false" aria-controls="laba-rider" id="tab-laba-rider">Rider app</button>
+                        </div>
+                        <div class="gallery__track" id="laba-customer" role="tabpanel" aria-labelledby="tab-laba-customer" tabindex="0">
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/laba/splash.webp" aria-label="Enlarge: Splash screen">
+                                    <span class="phone__screen" data-bar="light" style="--screen-bg:#1D1D1D"><img src="images/apps/laba/splash.webp" alt="Lábà FOODS splash screen with logo" loading="lazy" width="869" height="1800"></span>
+                                </button>
+                                <figcaption>Splash</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/laba/home.webp" aria-label="Enlarge: Brand and products">
+                                    <span class="phone__screen" data-bar="dark" style="--screen-bg:#F6F7F9"><img src="images/apps/laba/home.webp" alt="Brand values and product categories: plantain flour, Ijebu garri, poundo yam flour" loading="lazy" width="873" height="1880"></span>
+                                </button>
+                                <figcaption>Brand and products</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/laba/orders.webp" aria-label="Enlarge: Order tracking">
+                                    <span class="phone__screen" data-bar="dark" style="--screen-bg:#F6F7F9"><img src="images/apps/laba/orders.webp" alt="My orders list with a four-step delivery tracker for each order" loading="lazy" width="888" height="1864"></span>
+                                </button>
+                                <figcaption>Order tracking</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/laba/profile.webp" aria-label="Enlarge: Profile">
+                                    <span class="phone__screen" data-bar="dark" style="--screen-bg:#F6F7F9"><img src="images/apps/laba/profile.webp" alt="Customer profile with verified email and personal details" loading="lazy" width="873" height="1858"></span>
+                                </button>
+                                <figcaption>Customer profile</figcaption>
+                            </figure>
+                        </div>
+                        <div class="gallery__track" id="laba-rider" role="tabpanel" aria-labelledby="tab-laba-rider" tabindex="0" hidden>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/laba/rider-delivery.webp" aria-label="Enlarge: Active delivery">
+                                    <span class="phone__screen" style="--screen-bg:#1C2434"><img src="images/apps/laba/rider-delivery.webp" alt="Rider's active delivery with location-off prompt and confirm delivery button" loading="lazy" width="877" height="1947"></span>
+                                </button>
+                                <figcaption>Active delivery</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/laba/rider-navigation.webp" aria-label="Enlarge: Turn-by-turn navigation">
+                                    <span class="phone__screen" style="--screen-bg:#1C2434"><img src="images/apps/laba/rider-navigation.webp" alt="Turn-by-turn navigation: turn left in 160 m, 282.3 km and 7h 52min remaining" loading="lazy" width="876" height="1957"></span>
+                                </button>
+                                <figcaption>Turn-by-turn navigation</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/laba/rider-map.webp" aria-label="Enlarge: Full route map">
+                                    <span class="phone__screen" style="--screen-bg:#9FD3F7"><img src="images/apps/laba/rider-map.webp" alt="Full-screen Mapbox route from rider to customer across southern Nigeria" loading="lazy" width="879" height="1766"></span>
+                                </button>
+                                <figcaption>Full route map</figcaption>
+                            </figure>
+                        </div>
+                        <div class="gallery__nav">
+                            <button class="icon-btn" data-dir="-1" aria-label="Previous screens"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg></button>
+                            <button class="icon-btn" data-dir="1" aria-label="Next screens"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ---------- RIDIFY ---------- -->
+                <article class="project reveal" id="ridify" style="--accent:#38B6FF">
+                    <div class="project__info">
+                        <div class="project__meta">
+                            <span class="project__num">03</span>
+                            <span class="status status--testing"><span class="dot dot--testing"></span>Internal testing</span>
+                        </div>
+                        <h3 class="project__name">Ridify</h3>
+                        <p class="project__pitch">A geolocation app with a social layer: posts, profiles, a calendar and messaging. Built for a US-based team and now in internal testing.</p>
+                        <p class="project__role"><strong>Role:</strong> Flutter developer intern on a 6-person team, working under a senior mobile developer.</p>
+
+                        <dl class="case">
+                            <div>
+                                <dt>Architecture</dt>
+                                <dd>Built on the Very Good CLI structure: state in Cubits from the Bloc library, with flutter_hooks, get_it and freezed models. The app builds in three flavors (development, staging and production), each with its own Firebase project. Messaging runs over WebSockets. Work goes through pull requests on Azure DevOps.</dd>
+                            </div>
+                            <div>
+                                <dt>What I built</dt>
+                                <dd>The message list and chat screens, plus profile, edit profile, settings, security, help and about screens. I integrated the APIs for the feed, calendar events, notifications, privacy settings, block and report, saved posts and My Posts, and added shimmer loading states.</dd>
+                            </div>
+                            <div>
+                                <dt>Quality</dt>
+                                <dd>Where the Figma board had gaps, I proposed and built the missing screens. I reviewed 150+ lines of Dart each week, which cut bugs by about 30%, and tested the app on Android and iOS ahead of release.</dd>
+                            </div>
+                        </dl>
+
+                        <ul class="tags">
+                            <li>Flutter</li><li>Bloc / Cubit</li><li>flutter_hooks</li><li>get_it</li><li>freezed</li><li>WebSockets</li><li>Flavors</li><li>Firebase</li><li>Azure DevOps</li>
+                        </ul>
+
+                        <div class="project__links">
+                            <a class="btn btn--primary" data-link="ridifyApk" href="#" target="_blank" rel="noopener">Download APK
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14" /></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="gallery" data-gallery="ridify">
+                        <div class="gallery__track" tabindex="0" aria-label="Ridify screens, scroll horizontally">
+                            <figure class="shot">
+                                <button class="phone phone--android" data-full="images/apps/ridify/feed-live.webp" aria-label="Enlarge: Internal testing build">
+                                    <span class="phone__screen" style="--screen-bg:#FFFFFF"><img src="images/apps/ridify/feed-live.webp" alt="Ridify feed on an Android device during internal testing" loading="lazy" width="872" height="1945"></span>
+                                </button>
+                                <figcaption>Feed, internal test build</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/ridify/feed.webp" aria-label="Enlarge: Feed">
+                                    <span class="phone__screen" style="--screen-bg:#FFFFFF"><img src="images/apps/ridify/feed.webp" alt="Ridify home feed with text and photo posts" loading="lazy" width="780" height="1688"></span>
+                                </button>
+                                <figcaption>Home feed</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/ridify/profile.webp" aria-label="Enlarge: Profile">
+                                    <span class="phone__screen" style="--screen-bg:#FFFFFF"><img src="images/apps/ridify/profile.webp" alt="User profile with posts tab and edit profile button" loading="lazy" width="780" height="1688"></span>
+                                </button>
+                                <figcaption>Profile</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/ridify/menu.webp" aria-label="Enlarge: Account menu">
+                                    <span class="phone__screen" style="--screen-bg:#FFFFFF"><img src="images/apps/ridify/menu.webp" alt="Account menu: account, saved, settings, security and privacy, help, log out" loading="lazy" width="683" height="1477"></span>
+                                </button>
+                                <figcaption>Account menu</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/ridify/edit-profile.webp" aria-label="Enlarge: Edit profile">
+                                    <span class="phone__screen" style="--screen-bg:#FFFFFF"><img src="images/apps/ridify/edit-profile.webp" alt="Edit profile form with name, email, phone and birthday" loading="lazy" width="683" height="1477"></span>
+                                </button>
+                                <figcaption>Edit profile</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/ridify/photo-sheet.webp" aria-label="Enlarge: Photo picker">
+                                    <span class="phone__screen" style="--screen-bg:#8E8E93"><img src="images/apps/ridify/photo-sheet.webp" alt="Action sheet to take a photo or choose from the library" loading="lazy" width="683" height="1477"></span>
+                                </button>
+                                <figcaption>Photo picker sheet</figcaption>
+                            </figure>
+                        </div>
+                        <div class="gallery__nav">
+                            <button class="icon-btn" data-dir="-1" aria-label="Previous screens"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg></button>
+                            <button class="icon-btn" data-dir="1" aria-label="Next screens"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ---------- MOVIX ---------- -->
+                <article class="project project--flip reveal" id="movix" style="--accent:#FF3B3B">
+                    <div class="project__info">
+                        <div class="project__meta">
+                            <span class="project__num">04</span>
+                            <span class="status status--web"><span class="dot dot--web"></span>Web demo live</span>
+                        </div>
+                        <h3 class="project__name">Movix</h3>
+                        <p class="project__pitch">A movie discovery app. Users browse trending and top-rated films, search titles, open details with cast and similar movies, keep a watchlist, and switch between light and dark themes.</p>
+                        <p class="project__role"><strong>Role:</strong> Solo build for the A.I Basic React Native course at Algorithm Institute, which featured it as a student showcase.</p>
+
+                        <dl class="case">
+                            <div>
+                                <dt>Architecture</dt>
+                                <dd>Expo (SDK 54) with Expo Router file-based tabs, written in TypeScript on React Native's New Architecture. React Context holds the watchlist, profile and light/dark theme. The watchlist persists to AsyncStorage, so it survives restarts.</dd>
+                            </div>
+                            <div>
+                                <dt>Data</dt>
+                                <dd>Built on the TMDB API: trending this week, now playing, popular, top rated, search, movie details and similar titles. Search waits 500 ms after typing stops before calling the API, and the detail screen fetches details and similar movies in parallel.</dd>
+                            </div>
+                            <div>
+                                <dt>Ships everywhere</dt>
+                                <dd>The same codebase runs on Android, iOS and the web. The web build is deployed on Vercel and shown here in Safari on an iPhone. Course credential: Certified A.I Basic React Native Mobile Developer, Algorithm Institute, June 2026 (ID ALG-000045-B52E).</dd>
+                            </div>
+                        </dl>
+
+                        <ul class="tags">
+                            <li>React Native</li><li>Expo</li><li>Expo Router</li><li>TypeScript</li><li>Context API</li><li>AsyncStorage</li><li>TMDB API</li><li>Vercel</li>
+                        </ul>
+
+                        <div class="project__links">
+                            <a class="btn btn--primary" data-link="movixVideo" href="#" target="_blank" rel="noopener">Watch the demo
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+                            </a>
+                            <a class="btn btn--ghost" data-link="movixWeb" data-pending-label="" href="#" target="_blank" rel="noopener">Open web build</a>
+                        </div>
+                    </div>
+
+                    <div class="gallery" data-gallery="movix">
+                        <div class="gallery__track" tabindex="0" aria-label="Movix screens, scroll horizontally">
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/movix/detail.webp" aria-label="Enlarge: Movie detail">
+                                    <span class="phone__screen" style="--screen-bg:#F0F0F0"><img src="images/apps/movix/detail.webp" alt="Movix movie detail for Velvet Goldmine with rating, play and My List buttons, and cast" loading="lazy" width="772" height="1672"></span>
+                                </button>
+                                <figcaption>Movie detail</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/movix/explore.webp" aria-label="Enlarge: Explore and search">
+                                    <span class="phone__screen" style="--screen-bg:#F0F0F0"><img src="images/apps/movix/explore.webp" alt="Movix explore tab with search bar and top searches" loading="lazy" width="772" height="1670"></span>
+                                </button>
+                                <figcaption>Explore &amp; search</figcaption>
+                            </figure>
+                            <figure class="shot">
+                                <button class="phone phone--ios" data-full="images/apps/movix/more-like-this.webp" aria-label="Enlarge: More like this">
+                                    <span class="phone__screen" style="--screen-bg:#F0F0F0"><img src="images/apps/movix/more-like-this.webp" alt="Cast row and a More Like This grid of rated movie posters" loading="lazy" width="772" height="1669"></span>
+                                </button>
+                                <figcaption>More like this</figcaption>
+                            </figure>
+                        </div>
+                        <div class="gallery__nav">
+                            <button class="icon-btn" data-dir="-1" aria-label="Previous screens"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg></button>
+                            <button class="icon-btn" data-dir="1" aria-label="Next screens"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ---------- MORE WORK ---------- -->
+                <div class="more reveal">
+                    <h3 class="more__title">More mobile work</h3>
+                    <div class="more__grid">
+                        <article class="mini">
+                            <p class="mini__kicker">Flutter · KodeHauz</p>
+                            <h4>Job Board, WordWiz, Saleslify</h4>
+                            <p>I lead mobile development on all three apps. I refactored them to clean architecture, moved them from GetX to Riverpod, and integrated REST APIs plus GraphQL for Saleslify. Job Board is still in development.</p>
+                            <p class="mini__foot">Riverpod · Clean Architecture · REST · GraphQL</p>
+                        </article>
+                        <article class="mini">
+                            <p class="mini__kicker">Flutter · KodeCamp &amp; KodeHauz</p>
+                            <h4>Spelling Bee</h4>
+                            <p>A spelling app for children aged 5 and up, with speech-to-text and text-to-speech. I led the team that built it at KodeCamp, then shipped UI and feature improvements to it at KodeHauz.</p>
+                            <p class="mini__foot">Speech-to-text · Text-to-speech · Team lead</p>
+                        </article>
+                        <article class="mini">
+                            <p class="mini__kicker">Flutter · HNG Internship 11</p>
+                            <h4>Timbu Shop, NFC, Sketch Pad</h4>
+                            <p>A pixel-perfect Timbu Shop UI that hit 90% design accuracy and showed 20 products from the live Timbu API. I also built NFC read and write features and a real-time collaborative sketch pad, each with a 5-person team.</p>
+                            <p class="mini__foot">API integration · NFC · Real-time</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EXPERIENCE ============ -->
+        <section class="section section--light" id="experience">
+            <div class="container">
+                <header class="section__head reveal">
+                    <p class="section__index">02 / Experience</p>
+                    <h2 class="section__title">Leading, shipping, and teaching.</h2>
+                </header>
+
+                <ol class="xp">
+                    <li class="xp__item reveal">
+                        <div class="xp__when">2026 – Present</div>
+                        <div class="xp__body">
+                            <h3>Flutter Mobile App Developer <span>· KodeHauz · Remote</span></h3>
+                            <ul>
+                                <li>Lead mobile development on the Job Board, WordWiz and Saleslify apps, and refactor them to clean architecture.</li>
+                                <li>Moved all three apps from GetX to Riverpod so they are easier to maintain.</li>
+                                <li>Lead code reviews for a 12-person team, catching defects before release, and set the team's coding standards.</li>
+                                <li>Mentor interns with projects matched to their learning goals, and run weekly progress meetings.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="xp__item reveal">
+                        <div class="xp__when">2026 – Present</div>
+                        <div class="xp__body">
+                            <h3>Freelance Flutter Mobile Developer <span>· Contract · Remote</span></h3>
+                            <ul>
+                                <li><strong>Idey:</strong> built the app from start to Google Play release, covering payments, KYC, real-time chat and closed testing.</li>
+                                <li><strong>Lábà FOODS:</strong> built the customer and rider apps with Riverpod, GoRouter, Mapbox and Paystack, through to the production phase.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="xp__item reveal">
+                        <div class="xp__when">2025 – Present</div>
+                        <div class="xp__body">
+                            <h3>Flutter Mobile App Trainer <span>· KodeCamp · Remote</span></h3>
+                            <ul>
+                                <li>Built and maintain the Flutter curriculum, and revise it each cohort based on how learners did.</li>
+                                <li>Run sessions and workshops, set milestone assessments, and give each learner direct feedback.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="xp__item reveal">
+                        <div class="xp__when">2024 – Present</div>
+                        <div class="xp__body">
+                            <h3>Flutter Mobile App Developer Intern <span>· Ridify · Remote, USA</span></h3>
+                            <ul>
+                                <li>Build features and UI for a geolocation app with Bloc (Cubits), across development, staging and production flavors.</li>
+                                <li>Reviewed 150+ lines of Dart each week, cutting bugs by about 30%.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="xp__item reveal">
+                        <div class="xp__when">2024 – 2025</div>
+                        <div class="xp__body">
+                            <h3>Flutter Mobile Developer Intern <span>· KodeHauz · Remote</span></h3>
+                            <ul>
+                                <li>Shipped UI and feature improvements to the Spelling Bee app as part of a 12-person team.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="xp__item reveal">
+                        <div class="xp__when">2024</div>
+                        <div class="xp__body">
+                            <h3>Flutter Mobile Developer Intern <span>· HNG Internship 11 · KodeCamp 4.0</span></h3>
+                            <ul>
+                                <li>HNG 11 finalist, ranked in the top 523 of 24,123. Met every deadline across 9 stages.</li>
+                                <li>KodeCamp 4.0 finalist: went from stage 0 to 8 in 8 weeks, averaging 75/100 or higher on promotion tasks, with 45+ features and fixes shipped.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============ SKILLS ============ -->
+        <section class="section" id="skills">
+            <div class="container">
+                <header class="section__head reveal">
+                    <p class="section__index">03 / Skills</p>
+                    <h2 class="section__title">Skills, with where I used them.</h2>
+                    <p class="section__lede">I only list what I've actually used. Each skill names the project you can check it in.</p>
+                </header>
+
+                <div class="skills">
+                    <div class="skill-group reveal">
+                        <h3>Architecture</h3>
+                        <ul>
+                            <li><b>Clean Architecture</b><span>Lábà FOODS (data / domain / use cases), KodeHauz apps</span></li>
+                            <li><b>Feature-first + repositories</b><span>Idey, Ridify</span></li>
+                            <li><b>Dependency injection</b><span>get_it in Lábà FOODS and Ridify, GetX bindings in Idey</span></li>
+                            <li><b>Typed errors</b><span>dartz Either in Lábà FOODS</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h3>State &amp; navigation</h3>
+                        <ul>
+                            <li><b>Riverpod</b><span>Lábà FOODS, KodeHauz apps</span></li>
+                            <li><b>Bloc / Cubit</b><span>Ridify</span></li>
+                            <li><b>GetX</b><span>Idey (in production)</span></li>
+                            <li><b>GoRouter</b><span>Lábà FOODS</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h3>Networking &amp; real-time</h3>
+                        <ul>
+                            <li><b>REST with Dio</b><span>Idey, Lábà FOODS, Ridify</span></li>
+                            <li><b>Socket.IO</b><span>Idey chat, Lábà FOODS rider tracking</span></li>
+                            <li><b>WebSockets</b><span>Ridify messaging</span></li>
+                            <li><b>GraphQL</b><span>Saleslify</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h3>Payments, identity &amp; maps</h3>
+                        <ul>
+                            <li><b>Paystack</b><span>Idey, Lábà FOODS</span></li>
+                            <li><b>Korapay · Interswitch</b><span>Idey</span></li>
+                            <li><b>Didit biometric KYC · Google sign-in</b><span>Idey · Lábà FOODS</span></li>
+                            <li><b>Mapbox · TTS voice guidance</b><span>Lábà FOODS rider navigation</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h3>Firebase &amp; platform</h3>
+                        <ul>
+                            <li><b>Crashlytics</b><span>Idey, Lábà FOODS, Ridify</span></li>
+                            <li><b>Firestore · FCM</b><span>Lábà FOODS chat and push</span></li>
+                            <li><b>Remote Config · in-app updates</b><span>Idey</span></li>
+                            <li><b>Localization</b><span>Idey in 4 languages, Lábà FOODS, Ridify</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h3>Shipping &amp; teamwork</h3>
+                        <ul>
+                            <li><b>Play signing, closed testing, release</b><span>Idey (12 testers)</span></li>
+                            <li><b>CI/CD</b><span>GitHub Actions + Codemagic (Idey), Azure DevOps (Ridify)</span></li>
+                            <li><b>Build flavors</b><span>Ridify: dev, staging, prod</span></li>
+                            <li><b>Code review · Agile</b><span>KodeHauz, Ridify</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group skill-group--wide reveal">
+                        <h3>Also</h3>
+                        <ul>
+                            <li><b>React Native · Expo · TypeScript</b><span>Movix</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="principles reveal">
+                    <div>
+                        <h3>Ship to the store, not just the emulator.</h3>
+                        <p>An app isn't done until it's signed, tested by real users, and published. I handle that last stretch myself.</p>
+                    </div>
+                    <div>
+                        <h3>Build for the next feature.</h3>
+                        <p>Clean architecture and a deliberate choice of state management, so the codebase doesn't fight the team six months later.</p>
+                    </div>
+                    <div>
+                        <h3>Review everything.</h3>
+                        <p>Careful pull request review catches defects before users do, and it's how a team picks up good habits.</p>
+                    </div>
+                    <div>
+                        <h3>Teach what I learn.</h3>
+                        <p>I mentor interns and train KodeCamp learners. Explaining something is how I find out whether I really understand it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ JOURNEY ============ -->
+        <section class="section section--deep" id="journey">
+            <div class="container journey">
+                <div class="journey__intro reveal">
+                    <p class="section__index">04 / Journey</p>
+                    <h2 class="section__title">From petroleum engineering to the Play Store.</h2>
+                    <div class="profile-card">
+                        <img src="images/david-portrait.webp" alt="Portrait of David Ohimai" width="560" height="560" loading="lazy">
+                        <div>
+                            <p class="profile-card__name">David Ohimai</p>
+                            <p class="profile-card__role">Flutter Mobile Developer</p>
+                            <p class="profile-card__meta"><span class="dot dot--live"></span>Delta State, Nigeria · Open to remote</p>
                         </div>
                     </div>
                 </div>
-                <div class="column right">
-                    <div class="text">Message me</div>
-                    <form action="#">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" placeholder="Name" required>
-                            </div>
-                            <div class="field email">
-                                <input type="email" placeholder="Email" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
-                        </div>
-                        <div class="button-area">
-                            <button type="submit">Send message</button>
-                        </div>
-                    </form>
+                <ol class="timeline">
+                    <li class="reveal"><span class="timeline__year">2012–18</span>
+                        <div><h3>Engineering foundation</h3><p>B.Eng. in Petroleum Engineering, University of Benin.</p></div>
+                    </li>
+                    <li class="reveal"><span class="timeline__year">2023</span>
+                        <div><h3>Switched to software</h3><p>Studied Software Engineering at CypherCrescent Software Academy, Port Harcourt.</p></div>
+                    </li>
+                    <li class="reveal"><span class="timeline__year">2024</span>
+                        <div><h3>Went all in on Flutter</h3><p>Finalist at KodeCamp 4.0 and HNG Internship 11. Joined Ridify and KodeHauz as an intern.</p></div>
+                    </li>
+                    <li class="reveal"><span class="timeline__year">2025</span>
+                        <div><h3>Started teaching</h3><p>Became a Flutter trainer at KodeCamp, writing the curriculum and running sessions.</p></div>
+                    </li>
+                    <li class="reveal"><span class="timeline__year">2026</span>
+                        <div><h3>Leading and shipping</h3><p>Lead mobile developer at KodeHauz. Shipped Idey to Google Play, took Lábà FOODS to production, and built Movix in React Native.</p></div>
+                    </li>
+                    <li class="reveal timeline__next"><span class="timeline__year">Next</span>
+                        <div><h3>Mobile + AI</h3><p>Bringing LLM features into mobile products, building on my AI engineering training.</p></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============ AI CROSS-LINK ============ -->
+        <section class="section section--tight">
+            <div class="container">
+                <a class="ai-band reveal" href="https://david-ohimai.github.io/ai-engineering-portfolio/" target="_blank" rel="noopener">
+                    <div>
+                        <p class="ai-band__kicker">Also building with AI</p>
+                        <h2>RAG backends, tool-using agents, and LLM systems.</h2>
+                        <p>DocuChat, KodeBuddy AI, a multi-agent code reviewer and more. They're in a separate portfolio.</p>
+                    </div>
+                    <span class="ai-band__cta">View AI portfolio
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="contact__card reveal">
+                    <p class="section__index">05 / Contact</p>
+                    <h2 class="contact__title">Have a mobile app to ship?</h2>
+                    <p class="contact__lede">I'm open to remote Flutter roles and contract work. I'm based in Delta State, Nigeria.</p>
+                    <a class="contact__email" href="mailto:daveohimai@gmail.com">daveohimai@gmail.com</a>
+                    <div class="contact__links">
+                        <a class="btn btn--primary" href="mailto:daveohimai@gmail.com">Email me</a>
+                        <a class="btn btn--ghost" href="https://www.linkedin.com/in/david-ohimai" target="_blank" rel="noopener">LinkedIn</a>
+                        <a class="btn btn--ghost" href="https://github.com/Daveohi" target="_blank" rel="noopener">GitHub</a>
+                        <a class="btn btn--ghost" data-link="cv" href="#" target="_blank" rel="noopener">Résumé</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- footer section start -->
-    <footer>
-        <span>Created By <a href="https://github.com/Daveohi">David Ohimai</a> | <span class="far fa-copyright"></span>
-            2022 All rights reserved.</span>
+    <footer class="footer">
+        <div class="container footer__inner">
+            <span>© <span id="year">2026</span> David Ohimai</span>
+            <span>Hand-built with HTML, CSS and JavaScript · <a href="https://github.com/Daveohi/portfolio-website" target="_blank" rel="noopener">Source</a></span>
+        </div>
     </footer>
 
-    <!-- <script src="script.js"></script> -->
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer" hidden>
+        <button class="lightbox__close icon-btn" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></svg></button>
+        <button class="lightbox__prev icon-btn" aria-label="Previous screenshot"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg></button>
+        <figure class="lightbox__figure">
+            <div class="phone phone--android lightbox__phone">
+                <span class="phone__screen"><img alt=""></span>
+            </div>
+            <figcaption class="lightbox__caption"></figcaption>
+        </figure>
+        <button class="lightbox__next icon-btn" aria-label="Next screenshot"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg></button>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
