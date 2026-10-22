@@ -380,26 +380,26 @@
                             <span class="status status--web"><span class="dot dot--web"></span>Web demo live</span>
                         </div>
                         <h3 class="project__name">Movix</h3>
-                        <p class="project__pitch">A movie discovery app. Users browse and search titles, open details with cast and similar films, keep a watchlist, and personalize their space.</p>
+                        <p class="project__pitch">A movie discovery app. Users browse trending and top-rated films, search titles, open details with cast and similar movies, keep a watchlist, and switch between light and dark themes.</p>
                         <p class="project__role"><strong>Role:</strong> Solo build for the A.I Basic React Native course at Algorithm Institute, which featured it as a student showcase.</p>
 
                         <dl class="case">
                             <div>
-                                <dt>Why it matters</dt>
-                                <dd>It shows I can bring the same mobile product thinking (tab navigation, lists, detail views, saved state) to React Native, not only Flutter.</dd>
+                                <dt>Architecture</dt>
+                                <dd>Expo (SDK 54) with Expo Router file-based tabs, written in TypeScript on React Native's New Architecture. React Context holds the watchlist, profile and light/dark theme. The watchlist and "watched" flags persist to AsyncStorage, so they survive restarts.</dd>
                             </div>
                             <div>
-                                <dt>What it does</dt>
-                                <dd>Home, Explore, My List and Profile tabs. Search with top searches, a detail page with rating, runtime, genre and cast, and a "More Like This" grid. The build runs on the web as well, shown here in Safari on an iPhone.</dd>
+                                <dt>Data</dt>
+                                <dd>Built on the TMDB API: trending this week, now playing, popular, top rated, search, movie details and similar titles. Search waits 500 ms after typing stops before calling the API, and the detail screen fetches details and similar movies in parallel.</dd>
                             </div>
                             <div>
-                                <dt>Credential</dt>
-                                <dd>Certified A.I Basic React Native Mobile Developer, Algorithm Institute, June 2026. Certificate ID ALG-000045-B52E.</dd>
+                                <dt>Ships everywhere</dt>
+                                <dd>The same codebase runs on Android, iOS and the web. The web build is deployed on Vercel and shown here in Safari on an iPhone. Course credential: Certified A.I Basic React Native Mobile Developer, Algorithm Institute, June 2026 (ID ALG-000045-B52E).</dd>
                             </div>
                         </dl>
 
                         <ul class="tags">
-                            <li>React Native</li><li>Tab navigation</li><li>Watchlist</li><li>Search</li><li>Web build</li>
+                            <li>React Native</li><li>Expo</li><li>Expo Router</li><li>TypeScript</li><li>Context API</li><li>AsyncStorage</li><li>TMDB API</li><li>Vercel</li>
                         </ul>
 
                         <div class="project__links">
@@ -606,7 +606,7 @@
                     <div class="skill-group skill-group--wide reveal">
                         <h3>Also</h3>
                         <ul>
-                            <li><b>React Native</b><span>Movix</span></li>
+                            <li><b>React Native · Expo · TypeScript</b><span>Movix</span></li>
                         </ul>
                     </div>
                 </div>
