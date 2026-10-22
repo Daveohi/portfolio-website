@@ -11,6 +11,7 @@ const LINKS = {
     ridifyApk: "https://drive.google.com/drive/folders/1b2G52h2F3HYau-kJtyrP7pYyWTzL4HAj?usp=sharing",
     movixVideo: "https://drive.google.com/drive/folders/1sn20VyBBRL31IrQJGZuba4KdV-1lk0mg?usp=drive_link",
     movixWeb: "https://movixapp-sable.vercel.app",
+    movixRepo: "https://github.com/Daveohi/movix-app",
 };
 
 document.documentElement.classList.add("js");
