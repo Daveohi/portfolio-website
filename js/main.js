@@ -5,9 +5,7 @@
 const LINKS = {
     cv: "https://drive.google.com/file/d/1yM3WpBLHyt_AT1xCwq5UA7u3bWj3qdc-/view?usp=sharing",
     ideyPlay: "https://play.google.com/store/apps/details?id=com.idey.app",
-    // Still in Play review (listing returns 404). Once public, set to:
-    // https://play.google.com/store/apps/details?id=com.labafoods.app
-    labaPlay: "",
+    labaPlay: "https://play.google.com/store/apps/details?id=com.labafoods.app",
     ridifyApk: "https://drive.google.com/drive/folders/1b2G52h2F3HYau-kJtyrP7pYyWTzL4HAj?usp=sharing",
     movixVideo: "https://drive.google.com/drive/folders/1sn20VyBBRL31IrQJGZuba4KdV-1lk0mg?usp=drive_link",
     movixWeb: "https://movixapp-sable.vercel.app",
