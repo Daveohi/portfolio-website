@@ -7,7 +7,7 @@ A single-page portfolio for my Flutter work. It shows real screenshots of apps I
 | Section | Contents |
 | --- | --- |
 | Hero | Who I am, what I build, and four headline facts from my CV |
-| Apps | Case studies for **Idey** (live on Google Play), **Lábà FOODS** (in Play Store review), **Ridify** (internal testing, APK available) and **Movix** (React Native, web demo), plus smaller cards for KodeHauz apps, Spelling Bee and HNG projects |
+| Apps | Case studies for **Idey** (live on Google Play), **Lábà FOODS** (live on Google Play), **Ridify** (internal testing, APK available) and **Movix** (React Native, web demo), plus smaller cards for KodeHauz apps, Spelling Bee and HNG projects |
 | Experience | Roles from my CV, newest first |
 | Skills | Each skill paired with the project where I used it |
 | Journey | From petroleum engineering to mobile development |
